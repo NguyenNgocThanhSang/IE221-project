@@ -1,7 +1,7 @@
 from django.urls import path
-from django.contrib import admin
 from . import views
 
 urlpatterns = [
-    path('', views.home_login, name='home_login'),
+    path('', views.signin, name='signin'),
+    path('Quizify_Home/', views.home, name='home'),
 ]
