@@ -1,4 +1,4 @@
-<!-- home.html -->
+{% comment %} <!-- home.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,5 +10,91 @@
     <h2>Welcome, {{ user.username }}!</h2>
     <p>You are now logged in.</p>
     <a href="{% url 'signin' %}">Logout</a>
+</body>
+</html> {% endcomment %}
+
+<!-- home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        /* styles.css */
+
+    /* Thiết lập các phần tử cơ bản */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    nav ul li {
+        margin-right: 20px;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        color: #ffc107;
+    }
+
+    .container {
+        width: 80%;
+        margin: auto;
+        padding: 20px;
+    }
+
+    /* Thiết lập các phần tử cụ thể */
+    h1 {
+        margin: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Quizify Platform</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Hoạt động</a></li>
+                <li><a href="#">Tài liệu</a></li>
+                <li><a href="#">Lớp học</a></li>
+            </ul>
+        </nav>
+        <div>
+            {% comment %} <p>Welcome, {{ user.username }}!</p> {% endcomment %}
+            <p>Logo user</p>
+            <a href="{% url 'signin' %}">Logout</a>
+        </div>
+    </header>
+    <h1>Welcome, {{ user.username }}!</h1>
+    <!-- Phần nội dung chính của trang web ở đây -->
 </body>
 </html>
