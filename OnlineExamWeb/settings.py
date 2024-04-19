@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
+import psycopg2
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -79,8 +80,13 @@ WSGI_APPLICATION = 'OnlineExamWeb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        #'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': 'onlineexamweb',
+        'USER': 'sang',
+        'PASSWORD': '26032003',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
