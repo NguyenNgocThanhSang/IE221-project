@@ -17,11 +17,19 @@
             <input type="text" id="username" name="username"><br>
             <label for="password">Password:</label><br>
             <input type="password" id="password" name="password"><br><br>
-            <button type="submit">Login</button>
+            <div class="btn">
+                {% comment %} <button type="button" onclick="redirect_to_sign_up()"><a href={% url 'signup' %}>Sign Up</a></button> {% endcomment %}
+                <button type="button" id="SignUpBtn">Sign Up</button>
+                <button type="submit">Login</button>
+            </div>
         </form>
         {% if error %}
             <p class="error">{{ error }}</p>
         {% endif %}
+
+
+        <script src="{% static "js/signin.js" %}"></script>
+        
     </div>
 </body>
 </html>

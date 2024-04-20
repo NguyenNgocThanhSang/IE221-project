@@ -37,8 +37,14 @@ input[type="password"] {
   box-sizing: border-box;
 }
 
-button[type="submit"] {
-  width: 100%;
+.btn  {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+button[type="submit"], button[type="button"]{
+  width: 45%;
   padding: 10px;
   background-color: #008080;
   color: #fff;
@@ -47,8 +53,13 @@ button[type="submit"] {
   cursor: pointer;
 }
 
-button[type="submit"]:hover {
+button[type="submit"]:hover, button[type="button"] {
   background-color: #008080;
+}
+
+button[type="button"] a{
+  text-decoration: none;
+  color: #fff;
 }
 
 p.error {
@@ -56,3 +67,7 @@ p.error {
   margin-top: 10px;
   text-align: center;
 }
+
+
+
+
