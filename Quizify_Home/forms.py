@@ -5,8 +5,8 @@ from django.contrib.auth.models import User, Group
 
 
 class SignUpForm(UserCreationForm):
-    email = forms.EmailField(max_length=254, help_text="Required. Inform a valid email address.", required=False)
-    role = forms.ChoiceField(choices=[('student', 'Student'), ('teacher', 'Teacher')], required=False)
+    email = forms.EmailField(max_length=254, help_text="Required. Inform a valid email address.", required=True)
+    role = forms.ChoiceField(choices=[('student', 'Student'), ('teacher', 'Teacher')], required=True)
     
     class Meta:
         model = User
@@ -30,14 +30,5 @@ class SignUpForm(UserCreationForm):
         if password1 and password2 and password1!=password2:
             raise forms.ValidationError("Passwords don't match.")
         return password2
-    
-    def save(self, commit: bool = True) -> Any:
-        '''ghi đè hàm save để tạo mật khẩu đơn giản'''
-        user = super().save(commit=False)
-        user.email = self.cleaned_data.get('email')
-        user.role = self.cleaned_data.get('role')
-        if commit:
-            user.save()
-        return user
     
         

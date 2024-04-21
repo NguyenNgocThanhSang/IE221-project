@@ -22,12 +22,12 @@
             <form method="post">
                 {% csrf_token %}
                 <label for="username">Username:</label><br>
-                <input type="text" id="username" name="username" value="{{ form.username.value }}" {% if form.errors.username %}class="error"{% endif %}><br>
+                <input type="text" id="username" name="username" {% if form.username.value %}value="{{ form.username.value }}"{% endif %} {% if form.errors.username %}class="error"{% endif %}><br>
                 {% if form.errors.username %}
                     <p class="error">{{ form.errors.username }}</p>
                 {% endif %}
                 <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" value="{{ form.email.value }}" {% if form.errors.email %}class="error"{% endif %}><br>
+                <input type="email" id="email" name="email" {% if form.email.value %}value="{{ form.email.value }}"{% endif %} {% if form.errors.email %}class="error"{% endif %}><br>
                 {% if form.errors.email %}
                     <p class="error">{{ form.errors.email }}</p>
                 {% endif %}
