@@ -12,6 +12,7 @@ body {
     margin: 0 auto;
 }
 
+
 header {
     background-color: #008080; /* Light blue */
     color: #fff;
@@ -129,20 +130,21 @@ footer {
 }
 
 .left {
-    width: 60%;
+    width: 50%;
+    display: flex;
 }
 
 .right{
-    width: 40%;
+    flex: 1;
     height: 65px;
 }
 
 .left input {
-    width: 70%;
+    width: 75%;
     height: 40px;
     font-size: 20px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid black;
     
 }
 
@@ -152,12 +154,15 @@ footer {
 }
 
 .left button {
+    flex: 1;
     height: 60px;
     padding: 0px 20px;
     background-color: #008080; /* Màu xanh teal */
     color: #fff;
-    border: none;
     cursor: pointer;
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: 400;
 }
 
 .right p {
@@ -167,3 +172,6 @@ footer {
     font-size: 40px;
 }
 
+.content {
+    min-height: 536px;
+}

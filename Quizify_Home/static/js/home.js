@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Example: Button action
     createTestBtn.addEventListener("click", function() {
-        alert("Creating a test...");
+        alert("creating a test")
     });
 
     // Initialize content to home page

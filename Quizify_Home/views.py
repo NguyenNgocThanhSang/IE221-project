@@ -37,10 +37,14 @@ def signup(request):
     return render(request, 'signup.html', {'form': form})
 
 def signout(request):
+    '''view đăng xuất'''
     logout(request)
     return redirect('signin.html')
 
 def home(request):
+    '''view hiển thị trang home'''
     return render(request, 'home.html')
 
-
+def manage(request):
+    '''view hiển thị trang admin'''
+    return render(request, 'manage.html')
